@@ -1,4 +1,4 @@
-  function exemploVariaveis() {
+function exemploVariaveis() {
   var nome = "João Silva";
   const idade = 18;
 
@@ -21,20 +21,24 @@
   console.log("O tipo de novoObjeto é: " + typeof novoObjeto);
 
   const gols = 1000;
-  const frase1 = "Pelé fez " + gols + " gols";
-  const frase2 = `Pelé fez ${gols} gols`;
+  const frase1 = 'Pelé fez ' + gols + ' gols';
+  const frase2 = `Pelé fez ${gols} gols`; // Utilizando Template String
+
 
   'JavaScript é "super" fácil';
   "JavaScript é 'super' fácil";
   'JavaScript é "super" fácil';
   `JavaScript é "super" fácil"`;
- // "JavaScript é "super" fácil"; // Inválido
+  // "JavaScript é "super" fácil"; // Inválido
 
- const numeroUM = prompt ("Informa o número um:");
- const numeroDois = prompt ("Informa o número dois:");
+  const numeroUm = prompt("Informe o número UM:");
+  const numeroDois = prompt("Informe o número DOIS:");
+  
+  if(isNaN(numeroUm) || isNaN(numeroDois)) {
+    console.log("Um dos valores informados não é um número válido.");
+    return;
+  }
 
- const soma = Number(numeroUM) + Number(numeroDois);
-    console.log("A soma é: " + soma);
-    
-
+  const soma = Number(numeroUm) + +numeroDois
+  console.log("A soma é:" + soma)
 }
